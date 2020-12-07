@@ -32,5 +32,18 @@
       </p>
       <ul class="busList"></ul>
     </div>
+    (function()
+    {
+      varapi= "data/buses.xml";
+      varmyXHR= newXMLHttpRequest();
+      varbusList= document.querySelector(".busList");
+      varadList= "";
+      myXHR.open("GET", api, true);
+      myXHR.addEventListener("readystatechange", showData);
+      myXHR.send();
+      functionshowData() {if(myXHR.readyState== 4) {console.dir(myXHR.responseXML);
+      }
+      }
+    })();
   </body>
 </html>
